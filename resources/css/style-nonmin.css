@@ -1,0 +1,326 @@
+h1, h2, h3, html {
+    font-weight: 300;
+}
+h1, h2 {
+    letter-spacing: 1px;
+}
+h2:after, header {
+    background-color: #27ae60;
+}
+.exp-box, .project-card, .sticky {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .08), 0 3px 6px rgba(0, 0, 0, .15);
+}
+.ul-skills, h2 {
+    text-align: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+section {
+    padding: 80px 0;
+}
+header {
+    height: 100vh;
+    color: #fff;
+}
+h1, h2, h3 {
+    margin: 0;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 500%;
+    margin-top: 0;
+    font-weight: 800;
+    margin-bottom: 20px;
+    word-spacing: 3px;
+}
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+}
+h2:after {
+    display: block;
+    height: 2px;
+    content: " ";
+    width: 100px;
+    margin: 30px auto 0;
+}
+.hero-textbox, .hero-textbox h3 {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%}
+.hero-textbox {
+    transform: translate(-40%, -90%);
+}
+.hero-textbox h3 {
+    font-weight: 400;
+    transform: translate(-31%, 40%);
+}
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+    margin-right: 29%}
+.main-nav li {
+    display: inline-block;
+    margin-right: 24px;
+}
+.main-nav li a:link, .main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 70%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .6s;
+    padding: 8px 0;
+}
+.main-nav li a:active, .main-nav li a:hover {
+    border-bottom: 2px solid #fff;
+}
+.social-links {
+    list-style: none;
+    float: right;
+    margin-right: 35%;
+    margin-top: 30px;
+}
+.social-links li {
+    display: inline-block;
+    margin-right: 50px;
+}
+.social-links li a {
+    color: #fff;
+    font-size: 180%;
+    transition: color .5s;
+}
+.social-links li a:hover {
+    color: #5A5A5A;
+}
+.mobile-nav-icon {
+    float: right;
+    margin-top: 12px;
+    cursor: pointer;
+    display: none;
+}
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 12px;
+    background-color: rgba(39, 174, 96, .98);
+    z-index: 2;
+}
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 70%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .6s;
+    padding-bottom: 2px;
+}
+.sticky .main-nav li a:active, .sticky .main-nav li a:hover {
+    border-bottom: 2px solid #fff;
+}
+.about-me {
+    background-color: #F9F9F9;
+    height: 90vh;
+}
+strong a:link, strong a:visited {
+    text-decoration: none;
+    color: #27ae60;
+    transition: background .3s, color .6s;
+    padding: 3px;
+    margin: -2px;
+}
+strong a:active, strong a:hover {
+    background: #27ae60;
+    color: #fff;
+    border-radius: 3px;
+}
+.about-me .write-up {
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 30px;
+    font-size: 95%;
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    line-height: 30px;
+    text-align: center;
+}
+.write-up p {
+    margin-bottom: 20px;
+}
+.exp-box {
+    background-color: #F9F9F9;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-size: 96%}
+.exp-box h3 {
+    font-weight: 500;
+}
+.exp-duration {
+    float: right;
+    font-weight: 400;
+    font-size: 80%;
+    margin-top: 3px;
+}
+.exp-role {
+    margin-top: 5px;
+}
+.innov {
+    margin-left: 6.5%}
+.nano {
+    margin-left: 5%}
+.project-card {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    margin-bottom: 30px;
+}
+.project-image img {
+    margin-left: 3%}
+.project-content h3 {
+    margin: 5px auto;
+}
+.odd .project-content h3 {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: -3px;
+}
+.odd .project-content p, .project-content p {
+    font-size: 94%;
+    margin-top: 20px;
+    line-height: 27px;
+}
+.odd .project-content p {
+    margin-left: 10px;
+}
+.odd .project-card a:link, .odd .project-card a:visited, .project-card a:link, .project-card a:visited {
+    text-decoration: none;
+    color: #555;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    transition: border-bottom .2s;
+}
+.project-card a:link, .project-card a:visited {
+    float: right;
+    margin-top: 48px;
+    margin-right: 3%}
+.odd .project-card a:link, .odd .project-card a:visited {
+    float: left;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    margin-left: 2%}
+.odd .project-card a:active, .odd .project-card a:hover, .project-card a:active, .project-card a:hover {
+    border-bottom: 2px solid #27ae60;
+}
+.ul-skills {
+    padding-left: 0;
+}
+.li-skills {
+    display: inline-block;
+    margin: 20px 7px 7px;
+    padding: 7px 14px;
+    color: #fff;
+    background: #27ae60;
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
+}
+.wp-1 {
+    opacity: 0;
+}
+.wp-1.animated {
+    opacity: 1;
+}
+.nano {
+    opacity: 0;
+}
+.nano.animated {
+    opacity: 1;
+}
+.alien {
+    opacity: 0;
+}
+.alien.animated {
+    opacity: 1;
+}
+.innov {
+    opacity: 0;
+}
+.innov.animated {
+    opacity: 1;
+}
+.bit {
+    opacity: 0;
+}
+.bit.animated {
+    opacity: 1;
+}
+.pat {
+    opacity: 0;
+}
+.pat.animated {
+    opacity: 1;
+}
+.age {
+    opacity: 0;
+}
+.age.animated {
+    opacity: 1;
+}
+.myread {
+    opacity: 0;
+}
+.myread.animated {
+    opacity: 1;
+}
+h1 {
+    z-index:  -2;
+}
+#scroll {
+    color:  #fff;
+    position:  absolute;
+    left:  50%;
+    top:  80%;
+}
+.vanish {
+    display:  none;
+}
