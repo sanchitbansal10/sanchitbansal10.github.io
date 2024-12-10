@@ -1,0 +1,121 @@
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+/* Timeline dot */
+.timeline-dot {
+  position: absolute;
+  left: -2.4rem;
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--background);
+}
+
+.timeline-content {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.timeline-link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.timeline-link:hover,
+.timeline-link:focus {
+  color: var(--color);
+  text-decoration: underline;
+}
+
+.timeline-description {
+  margin: 0;
+  color: var(--color-secondary);
+  line-height: 1.5;
+}
+
+/* Add these new styles */
+.timeline-company {
+  font-weight: 600;
+  color: var(--color);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-location {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content-details {
+  margin-top: 1rem;
+}
+
+.timeline-content-details ul {
+  list-style-type: disc;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.timeline-content-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: var(--color);
+}
+
+/* Make sure bullet points are visible */
+.timeline-content-details ul li::marker {
+  color: var(--accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .timeline-container {
+    padding: 1rem;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-dot {
+    left: -1.9rem;
+  }
+} 

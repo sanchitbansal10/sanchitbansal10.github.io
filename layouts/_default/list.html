@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ if eq .Section "career" }}
+    {{ partial "timeline.html" . }}
+  {{ else }}
+    {{ range .Pages }}
+      <article>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ .Summary }}
+      </article>
+    {{ end }}
+  {{ end }}
+{{ end }} 
