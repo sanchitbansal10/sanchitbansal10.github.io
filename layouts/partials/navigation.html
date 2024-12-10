@@ -1,0 +1,13 @@
+<nav class="site-navigation">
+    <ul class="flex space-x-6">
+        {{ range .Site.Data.navigation.main }}
+            <li>
+                <a href="{{ .url }}" 
+                   class="text-gray-300 hover:text-white transition-colors duration-200"
+                   {{ if eq $.Page.RelPermalink .url }}aria-current="page"{{ end }}>
+                    {{ .name }}
+                </a>
+            </li>
+        {{ end }}
+    </ul>
+</nav> 

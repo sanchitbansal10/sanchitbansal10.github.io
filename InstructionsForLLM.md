@@ -1,0 +1,1 @@
+Make use of hugo documentation to help me with the tasks
