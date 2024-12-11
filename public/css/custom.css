@@ -1,7 +1,0 @@
-body {
-    cursor: text; /* This makes the cursor look like a text cursor, similar to a terminal */
-}
-
-a, button {
-    cursor: pointer; /* Ensure links and buttons still have the pointer cursor */
-} 
