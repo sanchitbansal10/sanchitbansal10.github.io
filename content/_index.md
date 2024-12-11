@@ -1,15 +1,8 @@
 ---
-title: "Welcome to My New Hugo Site"
-description: "This is the homepage of my new Hugo site."
+title: "Sanchit Bansal"
+description: "Personal website of Sanchit Bansal"
 ---
 
-# Hello World
+Hello World,
 
-I am Sanchit, a web engineer working on tech for 7 years now. I've special interest in web performance optimization
-
-## Latest Posts
-
-- [Post 1](./post1)
-- [Post 2](./post2)
-
-Feel free to explore and enjoy the content!
+I am Sanchit, a web engineer working on tech for 7 years now. This is my space on internet where I share my experiences, learnings and thoughts.

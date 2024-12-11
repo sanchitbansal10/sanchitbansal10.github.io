@@ -1,0 +1,7 @@
+# Hugo default output directory
+/public/
+
+# Other common Hugo-related entries you might want to include
+/resources/_gen/
+/assets/jsconfig.json
+/.hugo_build.lock
