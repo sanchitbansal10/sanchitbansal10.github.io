@@ -25,3 +25,6 @@ theme = 'terminal'
         url = "/contact"
         weight = 5
 
+[params]
+CenterTheme = true
+
