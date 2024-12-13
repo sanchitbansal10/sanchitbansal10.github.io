@@ -1,0 +1,66 @@
+<ul class="menu menu--mobile">
+  <li class="menu__trigger" aria-expanded="false" role="button" tabindex="0">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      {{ range $.Site.Menus.main }}
+        {{ if not .HasChildren }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      {{ end }}
+      {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
+        <hr />
+        {{ range $.Site.Home.AllTranslations }}
+          <li>
+            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </li>
+</ul>
+
+<style>
+.menu--mobile .menu__dropdown {
+  display: none;
+  position: absolute;
+  background: var(--background);
+  border: 2px solid;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  z-index: 99;
+}
+
+.menu--mobile .menu__dropdown.is-open {
+  display: block;
+}
+
+.menu--mobile .menu__trigger {
+  cursor: pointer;
+  user-select: none;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuTrigger = document.querySelector('.menu--mobile .menu__trigger');
+  const mobileMenu = document.querySelector('.menu--mobile .menu__dropdown');
+
+  if (mobileMenuTrigger && mobileMenu) {
+    mobileMenuTrigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      const isExpanded = mobileMenuTrigger.getAttribute('aria-expanded') === 'true';
+      mobileMenuTrigger.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('is-open');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.menu--mobile')) {
+        mobileMenu.classList.remove('is-open');
+        mobileMenuTrigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+});
+</script> 
