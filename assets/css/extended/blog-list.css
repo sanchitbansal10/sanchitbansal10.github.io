@@ -1,0 +1,40 @@
+.posts-title {
+  margin-bottom: 2rem;
+}
+
+.posts-description {
+  margin-bottom: 3rem;
+  color: var(--color);
+  opacity: 0.8;
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  margin-bottom: 0.5rem;
+}
+
+.post-title a {
+  text-decoration: none;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--color);
+  opacity: 0.8;
+}
+
+.post-tags {
+  margin-left: 1rem;
+}
+
+.post-tags a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+.post-tags a:hover {
+  text-decoration: underline;
+} 
