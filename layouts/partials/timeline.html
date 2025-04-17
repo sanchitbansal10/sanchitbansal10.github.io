@@ -1,7 +1,7 @@
 <div class="timeline-container" role="region" aria-label="Career Timeline">
   <div class="timeline">
     {{ range .Pages.ByDate.Reverse }}
-      <div class="timeline-item">
+      <div class="timeline-item" onclick="location.href='/career/details/{{ .File.BaseFileName }}'" tabindex="0" role="button" aria-label="View {{ .Title }}">
         <div class="timeline-dot" aria-hidden="true"></div>
         <div class="timeline-content">
           <div class="timeline-date" aria-label="Employment period">
