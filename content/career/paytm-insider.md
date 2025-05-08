@@ -5,6 +5,7 @@ startDate: "2019-06"
 endDate: "2021-05"
 location: "Mumbai, Maharashtra, India"
 type: "Full-time"
+weight: 3
 ---
 
 ## Role Overview

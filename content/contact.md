@@ -8,13 +8,16 @@ $ whoami Sanchit Bansal
 <br>
 
 $ contact -list
+
 📧 Email: sanchitbansal10@gmail.com
 
-🐦 Twitter: @sanchit3b
+🐦 Twitter: [@sanchit3b](https://twitter.com/sanchit3b)
 
 💼 LinkedIn: linkedin.com/in/sanchit-bansal-b987297a/
 
 🐙 GitHub: github.com/sanchitbansal
+
+💻 Upwork: [View Profile](https://www.upwork.com/freelancers/~0130bae7c5b55b6427?viewMode=1)
 
 <br>
 

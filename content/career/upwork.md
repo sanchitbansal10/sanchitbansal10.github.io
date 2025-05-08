@@ -6,6 +6,7 @@ endDate: "Present"
 location: "Bengaluru, Karnataka, India"
 type: "Full-time"
 mode: "Remote"
+weight: 1
 ---
 
 ## Role Overview

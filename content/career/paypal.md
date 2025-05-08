@@ -10,8 +10,11 @@ roles:
   - title: "Software Engineer 2 (Credit and Collections Org)"
     startDate: "2021-05"
     endDate: "2022-07"
+startDate: "2021-05"
+endDate: "2024-10"
 location: "Bengaluru, Karnataka, India"
 type: "Full-time"
+weight: 2
 ---
 
 ## Role Overview

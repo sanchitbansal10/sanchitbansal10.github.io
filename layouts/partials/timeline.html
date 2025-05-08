@@ -1,33 +1,35 @@
 <div class="timeline-container" role="region" aria-label="Career Timeline">
   <div class="timeline">
-    {{ range .Pages.ByDate.Reverse }}
-      <div class="timeline-item" onclick="location.href='/career/details/{{ .File.BaseFileName }}'" tabindex="0" role="button" aria-label="View {{ .Title }}">
-        <div class="timeline-dot" aria-hidden="true"></div>
-        <div class="timeline-content">
-          <div class="timeline-date" aria-label="Employment period">
-            {{ if .Params.startDate }}
-              {{ .Params.startDate }} - {{ .Params.endDate | default "Present" }}
-            {{ else }}
-              {{ .Date.Format "January 2006" }}
+    {{ range sort .Pages "Params.weight" "asc" }} <!-- Sort by weight in ascending order -->
+      {{ if eq .File.Dir "career/" }} <!-- Ensure only root-level files in the career folder are included -->
+        <div class="timeline-item" onclick="location.href='/career/details/{{ .File.BaseFileName }}'" tabindex="0" role="button" aria-label="View {{ .Title }}">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="timeline-date" aria-label="Employment period">
+              {{ if .Params.startDate }}
+                {{ .Params.startDate }} - {{ .Params.endDate | default "Present" }}
+              {{ else }}
+                {{ .Date.Format "January 2006" }}
+              {{ end }}
+            </div>
+            <h3 class="timeline-title">
+              {{ .Title }}
+            </h3>
+            {{ if .Params.company }}
+              <div class="timeline-company">{{ .Params.company }}</div>
             {{ end }}
-          </div>
-          <h3 class="timeline-title">
-            {{ .Title }}
-          </h3>
-          {{ if .Params.company }}
-            <div class="timeline-company">{{ .Params.company }}</div>
-          {{ end }}
-          {{ if .Params.location }}
-            <div class="timeline-location">{{ .Params.location }}</div>
-          {{ end }}
-          {{ if .Params.description }}
-            <p class="timeline-description">{{ .Params.description }}</p>
-          {{ end }}
-          <div class="timeline-content-details">
-            {{ .RawContent | markdownify }}
+            {{ if .Params.location }}
+              <div class="timeline-location">{{ .Params.location }}</div>
+            {{ end }}
+            {{ if .Params.description }}
+              <p class="timeline-description">{{ .Params.description }}</p>
+            {{ end }}
+            <div class="timeline-content-details">
+              {{ .RawContent | markdownify }}
+            </div>
           </div>
         </div>
-      </div>
+      {{ end }}
     {{ end }}
   </div>
 </div>

@@ -12,9 +12,9 @@ mode: "Remote"
 Working on building an AI based product for lead generation.
 
 ## Technologies
-- React, NextJS
+- React, NextJS, Trpc, react-query
 - Spring Boot
-- MySQL 
+- MySQL
 
 ## New things I am learning
 - Working accross different timezones in distributed teams. My teammates are spread accross multiple coutries
