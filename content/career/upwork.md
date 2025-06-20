@@ -10,14 +10,13 @@ weight: 1
 ---
 
 ## Role Overview
-Senior Software Engineer in the vnext team at Upwork, focusing on building AI tools for the Upwork platform.
+Senior Software Engineer in the emerging business team of Marketplace org. Working on a zero to one project for building AI powered outcome delivery application. Doing full stack development working on React on FE, Java on BE and python platform for AI capabilities.
 
 ## Key Responsibilities
-- Building AI-powered tools and features for the Upwork platform
-- Working with the vnext team to implement innovative solutions
+- Building AI-powered tools and features
 - Contributing to platform enhancement initiatives
 
 ## Technologies
-- AI/ML tools
-- Modern web technologies
-- Cloud infrastructure 
+- Frontend: React, NextJs, Tailwind, trpc, Auth0, 
+- Backend: Spring Boot, Java, Hibernate, PostgresSQL, Redis
+- AI Platform: Python, FastAPI, Langchain, Prompt Engineering
