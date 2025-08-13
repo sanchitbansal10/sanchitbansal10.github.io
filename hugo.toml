@@ -27,7 +27,7 @@ logoText = "Home 💻"
 [params]
 CenterTheme = true
 
-# Vercel Analytics
+# Vercel Analytics - Disabled for local development
 [params.vercelAnalytics]
-enabled = true
+enabled = false
 
