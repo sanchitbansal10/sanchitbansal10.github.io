@@ -20,3 +20,5 @@ Working on building an AI based product for lead generation.
 - Working accross different timezones in distributed teams. My teammates are spread accross multiple coutries
 - BE Heavylifting: This is the first time in my career building big BE systems using Spring from scratch. Super excited about it
 - Team Lead: Led the team for a sprint. Did sprint planning, manage delieverables for the sprint
+- Build a slack app and integrated that with Upwork ecoystem
+- Worked on a python service developing different AI agent workflows using n8n
