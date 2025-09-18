@@ -23,8 +23,8 @@ Progressive growth through multiple roles at PayPal, focusing on billing, subscr
 ## Key Achievements & Responsibilities
 
 ### Sr Software Engineer & Software Engineer 2 (Checkout Org)
-- Led development of billing and subscription products in checkout organization
-- Implemented complex payment flows and subscription management systems
+- Was part of team that owned billing and subscription products in checkout organization
+- Implemented, maintained and updated complex payment flows and subscription management systems
 - Optimized checkout processes for better user experience
 
 ### Software Engineer 2 (Credit and Collections Org)
@@ -33,8 +33,6 @@ Progressive growth through multiple roles at PayPal, focusing on billing, subscr
 - Collaborated with cross-functional teams to implement financial solutions
 
 ## Technologies
-- Backend services and APIs
-- Payment processing systems
+- Frontend Systems using React, NextJS
+- Backend services and APIs using Graphql, nodejs, Spring boot
 - Financial technology stack
-- Database management
-- Cloud infrastructure 

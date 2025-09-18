@@ -37,12 +37,12 @@ Progressive growth through multiple roles at PayPal, focusing on billing, subscr
   - Started working on Spring Boot based BE systems. Learnt new technologies around this and contributed to feature development and maintainence
 - Design Systems
   - Led the effort for Subscription tech stack migration. This involved understanding current system design and proposing the new system design using the new tech stack. Getting architecture/security/analytics/product review and signoff
-    - Understood plantUML
+    - Understood existing system
     - Learnt how to think about things at high level and low level
     - Learnt how to create and present effective design docs
-- Presentation/Demo skills: Gave multiple demos in meetings sometime reching over 50 participants
+- Presentation/Demo skills: Gave multiple demos in meetings sometime reching over 30 participants
 
 ## Career Highlights
-- Independently found and fixed a major performance issue which reduced tha fcp time of the RYP page in billing checkout by 600ms. I got to present this to the SVP of merchant org in a leadership meeting.
+- Independently found and fixed a major performance issue which reduced tha fcp time of the a very important page in billing UI flow by 600ms
 - Led a team of 5 engineers to integrate a new custom built framework to track user interactions in billing and subscription products
-- Led subscription migration for both BE and FE. Worked with Lead architect and worked on all stages of system migration.
+- Led system design for subscription migration initiative. Worked with Lead architect and worked on all stages of system migration.
