@@ -1,0 +1,47 @@
+<header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      {{ partial "logo.html" . }}
+    </div>
+    {{ if len $.Site.Menus }}
+      {{ partial "mobile-menu.html" . }}
+    {{ end }}
+    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
+      {{ partial "language-menu.html" . }}
+    {{ end }}
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode"></button>
+  </div>
+  {{ if len $.Site.Menus }}
+    {{ partial "menu.html" . }}
+  {{ end }}
+</header>
+
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+
+  function getTheme() {
+    return localStorage.getItem('theme') || 'dark';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      btn.textContent = '☽';
+      btn.title = 'Switch to dark mode';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      btn.textContent = '☀';
+      btn.title = 'Switch to light mode';
+    }
+  }
+
+  applyTheme(getTheme());
+
+  btn.addEventListener('click', function () {
+    var next = getTheme() === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  });
+})();
+</script>
