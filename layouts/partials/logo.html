@@ -1,0 +1,85 @@
+<style>
+.logo--animated {
+  background: transparent;
+  padding: 0;
+  font-family: monospace;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  color: var(--accent);
+}
+
+.logo-prompt {
+  color: var(--accent);
+  opacity: 0.6;
+  margin-right: 6px;
+}
+
+.logo-typed {
+  color: var(--accent);
+}
+
+.logo-cursor {
+  display: inline-block;
+  color: var(--accent);
+  animation: blink-cursor 0.8s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.header__logo a:hover .logo--animated {
+  opacity: 0.8;
+}
+</style>
+
+<a href="{{ $.Site.BaseURL }}">
+  <div class="logo logo--animated">
+    <span class="logo-prompt">~/</span><span class="logo-typed" id="logo-typewriter"></span><span class="logo-cursor" id="logo-cursor">▋</span>
+  </div>
+</a>
+
+<script>
+(function () {
+  var words = ['sanchit.dev', 'fullstack', 'sanchit.dev'];
+  var el = document.getElementById('logo-typewriter');
+  var cursor = document.getElementById('logo-cursor');
+  var wordIdx = 0;
+  var charIdx = 0;
+  var deleting = false;
+  var pauseAfterWord = 1800;
+  var typeSpeed = 90;
+  var deleteSpeed = 50;
+
+  function tick() {
+    var word = words[wordIdx];
+    if (!deleting) {
+      el.textContent = word.slice(0, charIdx + 1);
+      charIdx++;
+      if (charIdx === word.length) {
+        if (wordIdx === words.length - 1) return; // stay on last word, cursor keeps blinking
+        deleting = true;
+        setTimeout(tick, pauseAfterWord);
+        return;
+      }
+      setTimeout(tick, typeSpeed + Math.random() * 40);
+    } else {
+      el.textContent = word.slice(0, charIdx - 1);
+      charIdx--;
+      if (charIdx === 0) {
+        deleting = false;
+        wordIdx = (wordIdx + 1) % words.length;
+        setTimeout(tick, 300);
+        return;
+      }
+      setTimeout(tick, deleteSpeed);
+    }
+  }
+
+  setTimeout(tick, 400);
+})();
+</script>
