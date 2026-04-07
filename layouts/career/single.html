@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="career-detail">
+
+  <a href="/career" class="career-back-link">← Back to Career</a>
+
+  <div class="career-detail-header">
+    <h1 class="career-detail-company">{{ .Params.company }}</h1>
+
+    {{ if .Params.roles }}
+      <div class="career-detail-roles">
+        {{ range .Params.roles }}
+          <div class="career-detail-role-row">
+            <span class="career-detail-role-title">{{ .title }}</span>
+            <span class="career-detail-role-dates">{{ .startDate }} – {{ .endDate | default "Present" }}</span>
+          </div>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="career-detail-role-row">
+        <span class="career-detail-role-title">{{ .Params.role }}</span>
+        <span class="career-detail-role-dates">{{ .Params.startDate }} – {{ .Params.endDate | default "Present" }}</span>
+      </div>
+    {{ end }}
+
+    <div class="career-detail-badges">
+      {{ if .Params.location }}
+        <span class="career-detail-badge">{{ .Params.location }}</span>
+      {{ end }}
+      {{ if .Params.type }}
+        <span class="career-detail-badge">{{ .Params.type }}</span>
+      {{ end }}
+      {{ if .Params.mode }}
+        <span class="career-detail-badge">{{ .Params.mode }}</span>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="career-detail-content">
+    {{ .Content }}
+  </div>
+
+</div>
+{{ end }}

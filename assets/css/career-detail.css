@@ -1,0 +1,139 @@
+/* ── Back link ───────────────────────────────────────────── */
+.career-back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 1.75rem;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  opacity: 0.8;
+}
+
+.career-back-link:hover {
+  transform: translateX(-3px);
+  opacity: 1;
+}
+
+/* ── Header card ─────────────────────────────────────────── */
+.career-detail-header {
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html[data-theme="light"] .career-detail-header {
+  background: rgba(192, 120, 0, 0.06);
+}
+
+.career-detail-company {
+  font-size: 1.9rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+/* ── Role rows ───────────────────────────────────────────── */
+.career-detail-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.career-detail-role-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.career-detail-role-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color);
+}
+
+.career-detail-role-dates {
+  font-size: 0.82rem;
+  color: var(--color-secondary);
+  white-space: nowrap;
+}
+
+/* ── Badges ──────────────────────────────────────────────── */
+.career-detail-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.career-detail-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+
+/* ── Content sections ────────────────────────────────────── */
+.career-detail-content h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(192, 120, 0, 0.25);
+}
+
+html[data-theme="light"] .career-detail-content h2 {
+  border-bottom-color: rgba(192, 120, 0, 0.2);
+}
+
+.career-detail-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.career-detail-content ul li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: var(--color);
+}
+
+.career-detail-content ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8em;
+  top: 0.15em;
+}
+
+.career-detail-content p {
+  line-height: 1.7;
+  color: var(--color);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .career-detail-header {
+    padding: 1.1rem 1.1rem;
+  }
+
+  .career-detail-company {
+    font-size: 1.5rem;
+  }
+
+  .career-detail-role-row {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+}

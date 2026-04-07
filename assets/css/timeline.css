@@ -1,57 +1,81 @@
 .timeline-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 0;
 }
 
 .timeline {
   position: relative;
-  padding-left: 2rem;
-}
-
-/* Vertical line */
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--accent);
+  padding-left: 0;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 7rem;
+  margin-bottom: 2rem;
   cursor: pointer;
 }
 
-/* Timeline dot */
 .timeline-dot {
-  position: absolute;
-  left: -2.4rem;
-  top: 0.3rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid var(--background);
+  display: none;
 }
 
+/* Card: border and background live on timeline-content */
 .timeline-content {
   position: relative;
-  padding-left: 1rem;
+  padding: 1.5rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.004);
+  transition: border-left-width 0.2s ease, background 0.2s ease,
+              box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+html[data-theme="light"] .timeline-content {
+  background: rgba(192, 120, 0, 0.005);
+}
+
+.timeline-item:hover .timeline-content {
+  border-left-width: 5px;
+  background: rgba(255, 255, 255, 0.016);
+  transform: translateX(3px);
+}
+
+html[data-theme="light"] .timeline-item:hover .timeline-content {
+  background: rgba(192, 120, 0, 0.02);
+}
+
+/* "View details" hint that fades in on hover */
+.timeline-content::after {
+  content: 'View details →';
+  position: absolute;
+  bottom: 1rem;
+  right: 1.25rem;
+  font-size: 1rem;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.timeline-item:hover .timeline-content::after {
+  opacity: 1;
 }
 
 .timeline-date {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-secondary);
   margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 .timeline-title {
   margin: 0 0 0.5rem 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  transition: text-decoration 0.15s ease;
+}
+
+.timeline-item:hover .timeline-title {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
 }
 
 .timeline-link {
@@ -66,27 +90,39 @@
   text-decoration: underline;
 }
 
+.timeline-company {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-location {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
 .timeline-description {
+  font-size: 1rem;
   margin: 0;
   color: var(--color-secondary);
   line-height: 1.5;
 }
 
-/* Add these new styles */
-.timeline-company {
-  font-weight: 600;
-  color: var(--color);
-  margin-bottom: 0.25rem;
-}
-
-.timeline-location {
-  font-size: 0.9rem;
-  color: var(--color-secondary);
-  margin-bottom: 0.5rem;
-}
-
 .timeline-content-details {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.timeline-content-details h2,
+.timeline-content-details h3 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.timeline-content-details h2:first-child,
+.timeline-content-details h3:first-child {
+  margin-top: 0;
 }
 
 .timeline-content-details ul {
@@ -96,27 +132,25 @@
 }
 
 .timeline-content-details li {
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   line-height: 1.5;
   color: var(--color);
 }
 
-/* Make sure bullet points are visible */
 .timeline-content-details ul li::marker {
   color: var(--accent);
 }
 
-/* Responsive adjustments */
+.timeline-content-details p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+/* Responsive */
 @media (max-width: 640px) {
   .timeline-container {
     padding: 1rem;
   }
-  
-  .timeline {
-    padding-left: 1.5rem;
-  }
-  
-  .timeline-dot {
-    left: -1.9rem;
-  }
-} 
+}
