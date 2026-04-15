@@ -1,0 +1,38 @@
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-list-item a {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.project-list-item a:hover {
+  border-bottom-color: currentColor;
+}
+
+.project-list-item a::before {
+  content: "–";
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.project-name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.project-desc {
+  opacity: 0.65;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
