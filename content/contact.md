@@ -9,15 +9,15 @@ $ whoami Sanchit Bansal
 
 $ contact -list
 
-📧 Email: sanchitbansal10@gmail.com
+📧 Email: <a href="mailto:sanchitbansal10@gmail.com" target="_blank" rel="noopener noreferrer">sanchitbansal10@gmail.com</a>
 
-🐦 Twitter: [@sanchit3b](https://twitter.com/sanchit3b)
+🐦 Twitter: <a href="https://twitter.com/sanchit3b" target="_blank" rel="noopener noreferrer">@sanchit3b</a>
 
-💼 LinkedIn: linkedin.com/in/sanchit-bansal-b987297a/
+💼 LinkedIn: <a href="https://linkedin.com/in/sanchit-bansal-b987297a/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sanchit-bansal-b987297a/</a>
 
-🐙 GitHub: github.com/sanchitbansal
+🐙 GitHub: <a href="https://github.com/sanchitbansal" target="_blank" rel="noopener noreferrer">github.com/sanchitbansal</a>
 
-💻 Upwork: [View Profile](https://www.upwork.com/freelancers/~0130bae7c5b55b6427?viewMode=1)
+💻 Upwork: <a href="https://www.upwork.com/freelancers/~0130bae7c5b55b6427?viewMode=1" target="_blank" rel="noopener noreferrer">View Profile</a>
 
 <br>
 
