@@ -8,6 +8,9 @@ main:
   - name: "Blog"
     url: "/blog/"
     weight: 3
+  - name: "Weeknotes"
+    url: "/weeknotes/"
+    weight: 4
   - name: "Contact"
     url: "/contact/"
-    weight: 4 
+    weight: 5 
